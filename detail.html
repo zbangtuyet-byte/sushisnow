@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Snow - Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+     <!-- HEADER -->
+     <div class="nav-full">
+        <nav>
+            <div class="logo">
+                <img src="./image/banner 1.png" alt="Logo Sushi Snow">
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href="gioithieu.html">Giới Thiệu</a></li>
+                    <li><a href="tintuc.html">Tin Tức</a></li>
+                    <li><a href="detail.html">Sản Phẩm</a></li>
+                    <li><a href="cart.html">GIỎ HÀNG</a></li>
+                    <li class="dropdown">
+                        <a href="#">SET COMBO <span>▾</span></a>
+                        <ul class="menu-con">
+                            <li><a href="#">Combo 10 sushi ngẫu nhiên</a></li>
+                            <li><a href="#">Combo 3 sashimi và 1 Coca vừa</a></li>
+                            <li><a href="#">Combo 2 set sushi mix đủ loại</a></li>
+                        </ul>
+                    </li>
+                
+                    <!-- PHẦN THÊM MỚI: NÚT TÀI KHOẢN -->
+                    <li class="dropdown">
+                        <a href="#">TÀI KHOẢN <span>▾</span></a>
+                        <ul class="menu-con">
+                            <li><a href="dangnhap.html">Đăng Nhập</a></li>
+                            <li><a href="dangky.html">Đăng Ký</a></li>
+                        </ul>
+                    </li>
+                    <!-- KẾT THÚC PHẦN THÊM MỚI -->
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- CHI TIẾT SẢN PHẨM -->
+        <div class="product-detail-section">
+            <div class="row">
+                <div class="left">
+                    <img src="image/spz1.jpg" alt="Sushi Cá Hồi Tươi" id="main-img">
+                    <div class="thumbnail-row">
+                        <div class="frame" onclick="changeImage('image/spz2.png')">
+                            <img src="image/spz2.png" alt="Sushi Cá Hồi">
+                        </div>
+                        <div class="frame" onclick="changeImage('image/spz3.jpg')">
+                            <img src="image/spz3.jpg" alt="Sashimi Cá Ngừ">
+                        </div>
+                        <div class="frame" onclick="changeImage('image/spz4.png')">
+                            <img src="image/spz4.png" alt="Sushi California">
+                        </div>
+                        <div class="frame" onclick="changeImage('image/sp3.png')">
+                            <img src="image/sp3.png" alt="Sushi Khò Lửa">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <h2 id="ten"></h2>
+
+                    <p id="mota">
+                    </p>
+
+                    <h3 class="price" id="gia"></h3>
+                    <div class="quantity-box">
+                        <label><b>Số lượng: </b></label>
+                        <button onclick="decreaseQty()">-</button>
+                        <input type="text" id="quantity" value="1" readonly>
+                        <button onclick="increaseQty()">+</button>
+                    </div>
+                    <button class="btn-order" onclick="orderProduct()">Mua Ngay</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SẢN PHẨM TƯƠNG TỰ -->
+        <section class="container related-products-section">
+            <h1 class="section-title">SUSHI VÀ SASHIMI</h1>
+            <div class="row product-list" id="sptt">
+                <!-- JavaScript từ js/ds.js sẽ hiển thị sản phẩm ở đây -->
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-box">
+                <h2>SUSHI SNOW</h2>
+                <p>Hương vị ẩm thực Nhật Bản<br>tươi ngon mỗi ngày.</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>LIÊN KẾT</h3>
+                <a href="index.html">Trang chủ</a>
+                <a href="#">Sushi - Sashimi</a>
+                <a href="#">Liên hệ</a>
+                <a href="#">Ưu đãi</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>LIÊN HỆ</h3>
+                <p><i class="fa-solid fa-location-dot"></i> TP. Hồ Chí Minh</p>
+                <p><i class="fa-solid fa-phone"></i> 0123 456 789</p>
+                <p><i class="fa-solid fa-envelope"></i> sushisnow@gmail.com</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>THEO DÕI</h3>
+                <div class="social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 SUSHI SNOW - All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- KẾT NỐI FILE DỮ LIỆU SẢN PHẨM JS/DS.JS -->
+    <script src="js/ds.js"></script>
+
+    <script>
+        // 1. Lấy ID sản phẩm từ URL (nếu không có mặc định lấy id = 1 hoặc phần tử đầu tiên)
+        let currentUrl = window.location.href;
+        let url = new URL(currentUrl);
+        let id = url.searchParams.get("id");
+
+        let item = ds.find(a => a.id === Number(id));
+        
+        // Phòng hờ trường hợp người dùng vào thẳng trang detail.html mà không truyền ?id=...
+        if (!item && ds.length > 0) {
+            item = ds[0];
+        }
+
+        // 2. Hiển thị thông tin sản phẩm chính lên giao diện
+        if (item) {
+            document.getElementById("main-img").src = `image/${item.hinh}`;
+            document.getElementById("ten").innerText = item.ten;
+            // Kiểm tra nếu gia là số thì dùng toLocaleString, ngược lại in thẳng chuỗi
+            let giaHienThi = typeof item.gia === 'number' ? item.gia.toLocaleString('vi-VN') + " đ" : item.gia;
+            document.getElementById("gia").innerText = giaHienThi;
+            document.getElementById("mota").innerText = item.mota;
+
+            // 3. Hiển thị danh sách sản phẩm tương tự (cùng loại)
+            let loai = item.loai;
+            let sptt = ds.filter(i => i.loai === loai && i.id !== item.id);
+
+            let htmlSptt = "";
+            for (let i = 0; i < sptt.length; i++) {
+                let giaSpTt = typeof sptt[i].gia === 'number' ? sptt[i].gia.toLocaleString('vi-VN') + " đ" : sptt[i].gia;
+                htmlSptt += `
+                <div class="col3">
+                    <img src="image/${sptt[i].hinh}" alt="${sptt[i].ten}">
+                    <h2>${sptt[i].ten}</h2>
+                    <p>${sptt[i].mota}</p>
+                    <h3>${giaSpTt}</h3>
+                    <button class="fm" onclick="detail(${sptt[i].id})">MUA NGAY</button>
+                </div>`;
+            }
+            document.getElementById("sptt").innerHTML = htmlSptt;
+        }
+
+        // 4. Các hàm xử lý đổi ảnh Thumbnail khi click vào
+        function changeImage(imagePath) {
+            document.getElementById("main-img").src = imagePath;
+        }
+
+        // 5. Hàm tăng giảm số lượng sản phẩm
+        function increaseQty() {
+            let qtyInput = document.getElementById("quantity");
+            let val = parseInt(qtyInput.value);
+            qtyInput.value = val + 1;
+        }
+
+        function decreaseQty() {
+            let qtyInput = document.getElementById("quantity");
+            let val = parseInt(qtyInput.value);
+            if (val > 1) {
+                qtyInput.value = val - 1;
+            }
+        }
+
+        // 6. Hàm xử lý nút "Đặt món ngay" (Thêm vào giỏ hàng localStorage và chuyển sang trang giỏ hàng)
+        function orderProduct() {
+            let quantity = parseInt(document.getElementById("quantity").value);
+            
+            // Lấy giỏ hàng từ localStorage (hoặc mảng trống nếu chưa có)
+            let giohang = JSON.parse(localStorage.getItem('giohang_Storage')) || [];
+
+            // Kiểm tra sản phẩm đã có trong giỏ hàng chưa
+            let foundIndex = giohang.findIndex(p => p.id === item.id);
+            if (foundIndex !== -1) {
+                // Đã có thì cộng dồn số lượng
+                giohang[foundIndex].sl = (giohang[foundIndex].sl || 1) + quantity;
+            } else {
+                // Chưa có thì thêm mới kèm số lượng chọn
+                let productToAdd = { ...item };
+                productToAdd.sl = quantity;
+                giohang.push(productToAdd);
+            }
+
+            // Lưu lại vào localStorage
+            localStorage.setItem("giohang_Storage", JSON.stringify(giohang));
+            
+            alert(`Đã thêm "${item.ten}" (Số lượng: ${quantity}) vào giỏ hàng thành công!`);
+            
+            // Chuyển hướng sang trang giỏ hàng (cart.html)
+            window.location.href = "cart.html";
+        }
+
+        // 7. Hàm chuyển hướng sang trang chi tiết kèm ID sản phẩm khác
+        function detail(productId) {
+            window.location.href = `detail.html?id=${productId}`;
+        }
+    </script>
+</body>
+
+</html>

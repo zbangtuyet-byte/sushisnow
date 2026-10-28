@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Sushi Snow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <!-- KHUNG ĐĂNG NHẬP -->
+    <div id="login">
+        <button id="btnTat">x</button>
+    
+        <h1>Đăng Nhập</h1>
+    
+        <div class="gr">
+            <label for="user">Tài khoản:</label>
+            <input type="text" id="user">
+    
+            <label for="pass">Mật khẩu:</label>
+            <input type="password" id="pass">
+        </div>
+    
+        <button id="btnLogin">Đăng nhập</button>
+    
+        <p id="thongbao"></p>
+
+        <a href="dangky.HTML" style="display: block; margin-top: 10px; text-align: center; color: #333; text-decoration: none;">Chưa có tài khoản? Đăng ký</a>
+    </div>
+
+   
+    <!-- HEADER -->
+    <div class="nav-full">
+        <nav>
+            <div class="logo">
+                <img src="./image/banner 1.png" alt="Logo Sushi Snow">
+            </div>
+
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.HTML">TRANG CHỦ</a></li>
+                    <li><a href="gioithieu.html">Giới Thiệu</a></li>
+                    <li><a href="tintuc.HTML">Tin Tức</a></li>
+                    <li><a href="detail.html">Sản Phẩm</a></li>
+                    <li><a href="cart.HTML">GIỎ HÀNG</a></li>
+                    <li class="dropdown">
+                        <a href="#">SET COMBO <span>▾</span></a>
+                        <ul class="menu-con">
+                            <li><a href="#">Combo 10 sushi ngẫu nhiên</a></li>
+                            <li><a href="#">Combo 3 sashimi và 1 Coca vừa</a></li>
+                            <li><a href="#">Combo 2 set sushi mix đủ loại</a></li>
+                        </ul>
+                    </li>
+                
+
+                    <!-- PHẦN THÊM MỚI: NÚT TÀI KHOẢN -->
+                    <li class="dropdown">
+                        <a href="#">TÀI KHOẢN <span>▾</span></a>
+                        <ul class="menu-con">
+                            <li><a href="#" id="dangnhap1">Đăng Nhập</a></li>
+                            <li><a href="#">Đăng Ký</a></li>
+                        </ul>
+                    </li>
+                    <!-- KẾT THÚC PHẦN THÊM MỚI -->
+
+                </ul>
+            </div>
+        </nav>
+
+        <!-- BANNER -->
+        <div class="container banner-container">
+            <div class="banner">
+                <div class="banner-1">
+                    <img id="banner" src="image/banner 1.png" alt="Banner Sushi Snow">
+
+                    <button class="btn-left" onclick="left()" aria-label="Ảnh trước">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="btn-right" onclick="right()" aria-label="Ảnh tiếp theo">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SẢN PHẨM TƯƠNG TỰ -->
+    <section class="container related-products-section">
+        <h1 class="section-title">SUSHI VÀ SASHIMI</h1>
+        <div class="row product-list" id="showbanh">
+            <!-- JavaScript từ js/ds.js sẽ hiển thị sản phẩm ở đây -->
+        </div>
+    </section>
+
+    <!-- QUẢNG CÁO -->
+    <section class="row ads-section">
+        <div class="col4">
+            <img src="image/yz4.jpg" alt="Sushi tươi ngon">
+            <h2>SUSHI & SASHIMI</h2>
+            <p>
+                Sushi tươi ngon kết hợp cùng lớp cơm dẻo thơm chuẩn vị Nhật và đa dạng nhân hấp dẫn.
+                Mỗi miếng sushi được cuộn khéo léo, nhỏ gọn tinh tế, rất thích hợp cho các buổi tiệc,
+                dịp kỷ niệm đặc biệt hay chỉ đơn giản là bữa ăn ngon miệng mỗi ngày.
+            </p>
+        </div>
+
+        <div class="col4">
+            <img src="image/yz1.png" alt="Combo Set Đặc Biệt">
+            <h2>COMBO ĐẶC BIỆT</h2>
+            <p>
+                Trải nghiệm trọn vẹn hương vị đại dương với các set mix kết hợp hoàn hảo
+                giữa sushi, sashimi tươi sống và đồ uống mát lạnh.
+            </p>
+        </div>
+
+        <div class="col4">
+            <img src="image/sp4.png" alt="Món Nhật Truyền Thống">
+            <h2>HƯƠNG VỊ NHẬT BẢN</h2>
+            <p>
+                Nguyên liệu tuyển chọn tươi ngon mỗi ngày, mang đậm phong cách ẩm thực
+                truyền thống xứ sở hoa anh đào phục vụ thực khách.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-box">
+                <h2>SUSHI SNOW</h2>
+                <p>Hương vị ẩm thực Nhật Bản<br>tươi ngon mỗi ngày.</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>LIÊN KẾT</h3>
+                <a href="">Trang chủ</a>
+                <a href="">Sushi - Sashimi</a>
+                <a href="">Liên hệ</a>
+                <a href="">Ưu đãi</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>LIÊN HỆ</h3>
+                <p><i class="fa-solid fa-location-dot"></i> TP. Hồ Chí Minh</p>
+                <p><i class="fa-solid fa-phone"></i> 0123 456 789</p>
+                <p><i class="fa-solid fa-envelope"></i> sushisnow@gmail.com</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>THEO DÕI</h3>
+                <div class="social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 SUSHI SNOW - All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- SCRIPT CHUYỂN BANNER -->
+    <script>
+        let arr = [
+            "image/banner 1.png",
+            "image/banner 1.png",
+            "image/banner 3.png"
+        ];
+        let i = 0;
+        function showBanner() {
+            document.getElementById("banner").src = arr[i];
+        }
+        function left() {
+            i--;
+            if (i < 0) {
+                i = arr.length - 1;
+            }
+            showBanner();
+        }
+        function right() {
+            i++;
+            if (i >= arr.length) {
+                i = 0;
+            }
+            showBanner();
+        }
+        setInterval(right, 3000);
+    </script>
+
+    <!-- KẾT NỐI FILE DỮ LIỆU SẢN PHẨM -->
+    <script src="js/ds.js"></script>
+
+    <script>
+        for (let j = 0; j < ds.length; j++) {
+            document.getElementById("showbanh").innerHTML += `
+            <div class="col3">
+                <img src="image/${ds[j].hinh}" alt="${ds[j].ten}">
+                <h2>${ds[j].ten}</h2>
+                <p>${ds[j].mota}</p>
+                <h3>${ds[j].gia.toLocaleString('vi-VN')} đ</h3>
+                <button class="fm" onclick="detail(${ds[j].id})">Chi tiết</button>
+            </div>`;
+        }
+
+        function detail(id) {
+            window.location.href = `detail.html?id=${id}`;
+        }
+    </script>
+     <script>
+        $("#btnTat").click(function() {
+            $("#login").hide();
+        });
+        $("#dangnhap1").click(function() {
+            $("#login").toggle();
+        });
+
+        // Xử lý kiểm tra thông tin Đăng nhập
+        $("#btnLogin").click(function() {
+            let user = $("#user").val().trim();
+            let pass = $("#pass").val().trim();
+            let thongbao = $("#thongbao");
+    
+            if (user === "" || pass === "") {
+                thongbao.text("Vui lòng nhập đầy đủ tài khoản và mật khẩu!").css("color", "red");
+            } else {
+                // Bạn có thể thay thế bằng logic kiểm tra tài khoản thực tế
+                thongbao.text("Đăng nhập thành công!").css("color", "green");
+            }
+        });
+    </script>
+</body>
+
+</html>

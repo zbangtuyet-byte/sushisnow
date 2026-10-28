@@ -1,0 +1,63 @@
+.sanpham {
+    margin: 15px;
+    padding-top: 100px;
+    color: rgb(250, 250, 250);
+    text-align: left;
+}
+
+.sanpham-container {
+    background-color: #000203eb;
+    padding: 10px;
+    box-sizing: border-box;
+}
+/* ROW */
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Ô SẢN PHẨM */
+.col3 {
+    position: relative;
+    background-color: #c67a00;
+    width: calc(25% - 10px);
+    height: 480px;
+    border-radius: 10px;
+    margin: 5px;
+    color: rgb(4, 2, 0);
+    text-align: center;
+}
+/* ẢNH SẢN PHẨM */
+.col3 img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+/* NÚT MUA */
+.col3 button {
+    background-color: rgb(98, 11, 0);
+    color: rgb(255, 251, 0);
+    border-radius:20px;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* HOVER NÚT */
+.col3 button:hover {
+    background-color: rgb(251, 138, 0);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+/* NHÃN GIẢM GIÁ */
+.khuyenmai {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    padding: 8px 7px;
+    background-color: rgb(101, 0, 0);
+    color: rgb(255, 251, 0);
+    border-radius: 10px 0px 10px 0px;
+}

@@ -1,0 +1,410 @@
+
+/* CÀI ĐẶT CHUNG */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* HEADER VÀ MENU */
+.nav-full {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ebffff;
+    position: relative;
+    z-index: 100;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    margin-left: 30px;
+    border-radius: 70%;
+    object-fit: contain;
+}
+
+.menu {
+    margin-right: 60px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu > ul {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu li {
+    position: relative;
+    display: block;
+    padding: 0;
+    background-color: transparent;
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 12px;
+    text-decoration: none;
+    color: rgba(54, 25, 0, 0.945);
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    color: rgb(234, 51, 0);
+}
+
+/* MENU CON */
+.menu ul li .menu-con {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 280px;
+    padding: 5px 0;
+    margin: 0;
+    background-color: #e8ffff;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.menu ul li .menu-con li {
+    display: block;
+    width: 100%;
+}
+
+.menu ul li .menu-con li a {
+    padding: 12px 15px;
+    white-space: normal;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.menu ul li .menu-con li a:hover {
+    color: rgb(234, 51, 0);
+    background-color: #d8f5f5;
+}
+
+.menu ul li.dropdown:hover .menu-con {
+    display: block;
+}
+
+/* BANNER */
+.banner-container {
+    width: 100%;
+}
+.banner,
+.banner-1 {
+    width: 100%;
+}
+
+.banner-1 {
+    position: relative;
+    height: 600px;
+}
+
+.banner-1 img {
+    width: 100%;
+    height: 100%;
+    
+    object-position: center;
+}
+
+/* NÚT CHUYỂN BANNER */
+.btn-left,
+.btn-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-left {
+    left: 20px;
+}
+
+.btn-right {
+    right: 20px;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* KHU VỰC SẢN PHẨM */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.related-products-section {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+}
+
+.section-title {
+    width: 100%;
+    margin: 0 0 20px;
+    text-align: left;
+    color: #222;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+/* THẺ SẢN PHẨM */
+.col3 {
+    width: 25%;
+    padding: 15px;
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    background-color: #fbfeff5f;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.col3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.col3 img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.col3 h2 {
+    font-size: 20px;
+    margin: 15px 0 10px;
+}
+
+.col3 p {
+    min-height: 40px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.col3 h3 {
+    color: #c0392b;
+    margin: 12px 0;
+}
+
+.col3 button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00505e;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.col3 button:hover {
+    background-color: #00a6a6;
+}
+
+/* BA KHỐI QUẢNG CÁO */
+.ads-section {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    background-color: #f5f5f5;
+}
+
+.col4 {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.col4 img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    margin: 0 auto 15px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.col4 h2 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #00505e;
+}
+
+.col4 p {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    margin-top: 0;
+    background-color: #000a0c;
+    color: white;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 35px 25px;
+}
+
+.footer-box {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-box h2,
+.footer-box h3 {
+    margin-top: 0;
+    color: #f5c542;
+}
+
+.footer-box p {
+    line-height: 1.7;
+}
+
+.footer-box > a {
+    display: block;
+    margin: 10px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-box > a:hover {
+    color: #f5c542;
+}
+
+.social {
+    display: flex;
+    gap: 18px;
+}
+
+.social a {
+    color: white;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    color: #f5c542;
+}
+
+.footer-bottom {
+    padding: 15px;
+    border-top: 1px solid #334044;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+body{
+    position: relative;
+}
+#login{
+    width: 500px;
+    border: 1px solid red;
+    position: absolute;
+    z-index: 10;
+    top: 200px;
+    left: calc(50% - 250px);
+    min-height: 100px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    display: none;
+    
+
+}
+#dangky{
+    width: 500px;
+    border: 1px solid red;
+    position: absolute;
+    z-index: 10;
+    top: 200px;
+    left: calc(50% - 250px);
+    min-height: 100px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    display: none;
+    
+
+}
+.gr input{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    outline: none;
+
+}
+.gr{
+    text-align: left;
+}
+
+#btnTat {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
